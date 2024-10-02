@@ -1,0 +1,44 @@
+
+import java.util.*;
+public class countNumber {
+
+	
+		// TODO Auto-generated method stub
+		 public static void main(String[] args) {
+		        Scanner scanner = new Scanner(System.in);
+		        int positiveCount = 0;
+		        int negativeCount = 0;
+		        int zeroCount = 0;
+		        
+		        String userChoice;
+
+		        do {
+		            // Prompt the user to enter a number
+		            System.out.print("Enter a number: ");
+		            int number = scanner.nextInt();
+
+		            // Increment the appropriate counter
+		            if (number > 0) {
+		                positiveCount++;
+		            } else if (number < 0) {
+		                negativeCount++;
+		            } else {
+		                zeroCount++;
+		            }
+
+		            // Ask the user if they want to enter another number
+		            System.out.print("Do you want to enter another number? (yes/no): ");
+		            userChoice = scanner.next();
+
+		        } while (userChoice.equalsIgnoreCase("yes"));
+
+		        // Display the counts
+		        System.out.println("Count of positive numbers: " + positiveCount);
+		        System.out.println("Count of negative numbers: " + negativeCount);
+		        System.out.println("Count of zeros: " + zeroCount);
+		        
+		        scanner.close();
+		    
+	}
+
+}
